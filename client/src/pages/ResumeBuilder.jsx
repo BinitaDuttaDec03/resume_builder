@@ -31,10 +31,12 @@ const ResumeBuilder = () => {
   const [activeSectionIdx, setActiveSectionIdx] = useState(0);
   const [removeBackground, setRemoveBackground] = useState(false);
 
-  const resumeId = useParams();
+  const { resumeId } = useParams();
 
   const loadExistingResume = async () => {
-    const resume = dummyResumeData.find((resume) => resume._id === resumeId);
+    const resume = dummyResumeData.find((resume) => {
+      return resume._id === resumeId;
+    });
 
     if (resume) {
       setResumeData(resume);
