@@ -19,8 +19,13 @@ const Dashboard = () => {
   const [resume, setResume] = useState(null);
   const [editResumeId, setEditResumeId] = useState("");
 
-  const colors = ["#9333ea", "#d97706", "#dc2626", "#0284c7", "#16a34a"];
   const navigate = useNavigate();
+
+  useEffect(() => {
+    loadAllResumes();
+  }, []);
+
+  const colors = ["#9333ea", "#d97706", "#dc2626", "#0284c7", "#16a34a"];
 
   const loadAllResumes = async () => {
     setAllResumes(dummyResumeData);
@@ -53,10 +58,6 @@ const Dashboard = () => {
       setAllResumes((prev) => prev.filter((resume) => resume._id !== resumeId));
     }
   };
-
-  useEffect(() => {
-    loadAllResumes();
-  }, []);
 
   return (
     <div>
