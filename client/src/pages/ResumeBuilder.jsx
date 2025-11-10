@@ -243,6 +243,7 @@ const ResumeBuilder = () => {
 
           {/* Right Panel - Preview */}
           <div className="lg:col-span-7 max-lg:mt-6">
+            {/* Buttons */}
             <div className="relative w-full">
               <div className="absolute bottom-3 left-0 right-0 flex items-center justify-end gap-2">
                 {resumeData.public && (
