@@ -2,6 +2,7 @@ import express from "express";
 import protectRoute from "../middlewares/auth.middleware.js";
 import {
   enhanceJobDescription,
+  enhanceProfessionalSummary,
   updateResume,
 } from "../controllers/ai.controller.js";
 
