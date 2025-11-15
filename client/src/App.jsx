@@ -9,6 +9,7 @@ import Preview from "./pages/Preview";
 import { useDispatch } from "react-redux";
 import { login, setLoading } from "./app/features/authSlice";
 import api from "./configs/api";
+import { Toaster } from "react-hot-toast";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,6 @@ const App = () => {
   }, []);
 
   const getUserData = async () => {
-    console.log("Hello");
     const token = localStorage.getItem("token");
 
     try {
@@ -42,6 +42,7 @@ const App = () => {
 
   return (
     <>
+      <Toaster />
       <Routes>
         <Route path="/" element={<Home />} />
 
