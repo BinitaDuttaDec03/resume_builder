@@ -1,4 +1,5 @@
 import openai from "../config/openai.js";
+import Resume from "../models/Resume.model.js";
 
 export const enhanceProfessionalSummary = async (req, res) => {
   try {
